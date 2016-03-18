@@ -9,8 +9,10 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,4 +64,12 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void sendMessage(View view){
+        Button button = (Button) view;
+        String appName = button.getText().toString();
+        Toast toast = Toast.makeText(this, "This button will launch " + appName, Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
 }
